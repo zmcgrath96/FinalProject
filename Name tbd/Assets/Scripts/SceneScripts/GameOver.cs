@@ -9,7 +9,7 @@ public class GameOver : MonoBehaviour {
     private GameObject[] leaderboardText;
     private GameObject gameOverText;
     private List<string> vals;
-    List<string[]> stats;
+    private List<string[]> stats;
 
     public void Awake()
     {
@@ -46,26 +46,49 @@ public class GameOver : MonoBehaviour {
     private void UpdateLeaderboard()
     {
         vals = SaveLoad.Load();                                                 // vals is a List<string> where each string is name,level,duration
+        Debug.Log("Size of vals in UpdateLeaderboard: " + vals.Count);
         stats = new List<string[]>();
+
         foreach (string stat in vals) stats.Add(stat.Split(','));               // each stats is [name,level,duration]
 
-        for (int i = 0; i < stats.Count; i++)                                      // Iterate through the array to see if the new level can/should be added to the array
+        string[] tempPlayerString = new string[3];
+        tempPlayerString[0] = GameVariables.PlayerName;
+        tempPlayerString[1] = GameVariables.LevelReached.ToString();
+        tempPlayerString[2] = GameVariables.LevelDuration.ToString();
+
+        if (stats.Count > 0)
         {
-            if (GameVariables.LevelReached >= int.Parse(stats[i][1]))
+            for (int i = 0; i < stats.Count; i++)                                      // Iterate through the array to see if the new level can/should be added to the array
             {
-                string[] tempPlayerString = new string[3];
-                tempPlayerString[0] = GameVariables.PlayerName;
-                tempPlayerString[1] = GameVariables.LevelReached.ToString();
-                tempPlayerString[2] = GameVariables.LevelReached.ToString();
+                if (i == stats.Count - 1)
+                {
+                    stats.Add(tempPlayerString);
+                    break;
+                }
 
-                if (GameVariables.LevelReached > int.Parse(stats[i][2]))
+                else if (GameVariables.LevelReached > int.Parse(stats[i][1]))
+                {
                     stats.Insert(i, tempPlayerString);
-                else
-                    stats.Insert(i + 1, tempPlayerString);
+                }
 
-                break;
+                else if (GameVariables.LevelReached == int.Parse(stats[i][1]))
+                {
+                    if (GameVariables.LevelDuration > System.Math.Round(System.Convert.ToDouble(stats[i][2]), 2))
+                    {
+                        stats.Insert(i, tempPlayerString);
+                    }
+                    else
+                    {
+                        stats.Insert(i + 1, tempPlayerString);
+                    }
+
+                    break;
+                }
+                
             }
         }
+        else
+            stats.Add(tempPlayerString);
 
         while (stats.Count > 10)
             stats.RemoveAt(stats.Count - 1);
@@ -75,10 +98,12 @@ public class GameOver : MonoBehaviour {
 
     private void SetLeaderboardText()
     {
+        int rank = 1;
         foreach (string[] playerStat in stats)
         {
-            GameObject.Find("PlayerText").GetComponent<Text>().text = playerStat[0] + "\n";
-            GameObject.Find("ScoreText").GetComponent<Text>().text = playerStat[1] + "\t" + playerStat[2] + "\n";
+            GameObject.Find("PlayerText").GetComponent<Text>().text += rank.ToString() + "\t \t" + playerStat[0] + "\n";
+            GameObject.Find("ScoreText").GetComponent<Text>().text += playerStat[1] + "\t \t \t" + System.Math.Round(System.Convert.ToDouble(playerStat[2]),2) + "\n";
+            rank++;
         }
     }
 
@@ -87,8 +112,11 @@ public class GameOver : MonoBehaviour {
     {
         while (vals.Count > 0)
             vals.RemoveAt(0);
+
         foreach (string[] toConvert in stats)
             vals.Add(toConvert[0]+","+toConvert[1]+","+toConvert[2]);
+
+        SaveLoad.Save(vals);
     }
 
 	/**
@@ -103,6 +131,7 @@ public class GameOver : MonoBehaviour {
 
     public void QuitGame()
     {
+        SaveLeaderboard();
         Application.Quit();
     }
 		

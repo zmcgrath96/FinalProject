@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEditor;
 
 public static class SaveLoad {
 
     public static List<string> leaderboard;
+
+
+    private static string path = "Assets/Resources/leaderboard.txt";
 
 
     /* Save
@@ -18,13 +22,20 @@ public static class SaveLoad {
         try
         {
             leaderboard = stats;
-            StreamWriter file = new StreamWriter(Application.persistentDataPath + "/leaderboard.txt");
+
+            StreamWriter file = new StreamWriter(path, false);
+
             foreach (string stat in leaderboard) file.WriteLine(stat);
+
+
             file.Close();
+
+            AssetDatabase.ImportAsset(path);
+
         }
         catch (System.Exception e)
         {
-            Debug.LogException(e);
+            Debug.Log("Error thrown from SaveLoad Save(): " +e);
         }
 
     }
@@ -37,10 +48,10 @@ public static class SaveLoad {
      */
     public static List<string> Load()
     {
-
+        leaderboard = new List<string>();
         try
         {
-            StreamReader file = new StreamReader(Application.persistentDataPath + "/leaderboard.txt");
+            StreamReader file = new StreamReader(path);
             string line = file.ReadLine();
             while (line != null)
             {
@@ -50,7 +61,7 @@ public static class SaveLoad {
         }
         catch(System.Exception e)
         {
-            Debug.LogException(e);
+            Debug.Log("Thrown from SaveLoad Load(): "+e);
         }
         return leaderboard;
     }
