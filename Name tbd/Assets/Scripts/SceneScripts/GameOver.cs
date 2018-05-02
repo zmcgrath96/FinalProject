@@ -40,6 +40,7 @@ public class GameOver : MonoBehaviour {
         }
         UpdateLeaderboard();
         SetLeaderboardText();
+        SaveLeaderboard();
     }
 
 
