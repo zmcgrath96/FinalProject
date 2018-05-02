@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
-
+    public GameObject manual;
     public void Awake()
     {
         GameObject music = GameObject.FindGameObjectWithTag("Music");
         Destroy(music);
+        manual.SetActive(false);
     }
 	/**
 	 * Loads the scene to play the game
@@ -38,4 +39,13 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene("TestMode");
     }
 	
+    public void ToManual()
+    {
+        manual.SetActive(true);
+    }
+
+    public void BackHome()
+    {
+        manual.SetActive(false);
+    }
 }

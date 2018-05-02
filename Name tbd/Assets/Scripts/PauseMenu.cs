@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour {
 	public static bool GameIsPaused = false;
 	public GameObject pauseMenuUI;
 	public Button PauseButton;
+    
+
 
 
 	void start() {
@@ -34,6 +36,8 @@ public class PauseMenu : MonoBehaviour {
 		SceneManager.LoadScene ("MainMenu");
 	}
 	
+   
+
 	// Update is called once per frame
 	void Update () {
 	}
