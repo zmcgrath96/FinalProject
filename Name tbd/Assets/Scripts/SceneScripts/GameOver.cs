@@ -101,8 +101,8 @@ public class GameOver : MonoBehaviour {
         int rank = 1;
         foreach (string[] playerStat in stats)
         {
-            GameObject.Find("PlayerText").GetComponent<Text>().text += rank.ToString() + "\t \t" + playerStat[0] + "\n";
-            GameObject.Find("ScoreText").GetComponent<Text>().text += playerStat[1] + "\t \t \t" + System.Math.Round(System.Convert.ToDouble(playerStat[2]),2) + "\n";
+            GameObject.Find("PlayerText").GetComponent<Text>().text += rank.ToString() + "\t \t \t \t \t" + playerStat[0] + "\n";
+            GameObject.Find("ScoreText").GetComponent<Text>().text += playerStat[1] + "\t \t \t \t \t \t \t \t \t" + System.Math.Round(System.Convert.ToDouble(playerStat[2]),2) + "\n";
             rank++;
         }
     }

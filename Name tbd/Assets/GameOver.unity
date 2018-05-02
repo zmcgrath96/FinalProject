@@ -407,7 +407,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Player
+  m_Text: Rank   Player
 --- !u!222 &863768719
 CanvasRenderer:
   m_ObjectHideFlags: 0
