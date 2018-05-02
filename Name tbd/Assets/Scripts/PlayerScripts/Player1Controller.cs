@@ -20,9 +20,12 @@ public class Player1Controller : MonoBehaviour
 
 	public GameObject enemyTarget;
 
+    public int attackCount;
 
     void Start()
     {
+        attackCount = 20;
+
 		player = GameObject.FindGameObjectWithTag ("Player");
         myPlayer = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -31,10 +34,6 @@ public class Player1Controller : MonoBehaviour
         //Debug.Log(myPlayer);
     }
 
-    //float playerDelta(float a, float b)
-    //{
-    //    return a - b; 
-    //}
 	/**
 	 * Updates the character position every 0.02 seconds. Controls all movement of the character
 	 * @Param None
@@ -61,8 +60,13 @@ public class Player1Controller : MonoBehaviour
         /// Attack ////
         if (isAttacking)// & !isTriggering)
         {
+            attackCount = 0;
             animator.Play("Player1Attack_Spin");
 			player.GetComponent<IPlayer>().Attack();
+        }
+        else if (attackCount < 20)
+        {
+            attackCount++;
         }
         else if (move.x < 0 && (Math.Abs(move.x) > Math.Abs(move.y)))
         {
@@ -90,7 +94,6 @@ public class Player1Controller : MonoBehaviour
             //animator.Play("Player1Idle");
             myPlayer.velocity = Vector3.zero;
         }
-
-      
+       
     }
 }

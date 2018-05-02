@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c3c865782347f41b6358d9fba14b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRange: 75
+  MovementRange: 175
   axesToUse: 0
   horizontalAxisName: Horizontal
   verticalAxisName: Vertical
@@ -402,8 +402,8 @@ RectTransform:
   m_Father: {fileID: 224696634923953932}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.16000001, y: 0.2}
-  m_AnchorMax: {x: 0.16000001, y: 0.2}
+  m_AnchorMin: {x: 0.16000001, y: 0.224}
+  m_AnchorMax: {x: 0.16000001, y: 0.224}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 155, y: 142.06}
   m_Pivot: {x: 0.5, y: 0.5}

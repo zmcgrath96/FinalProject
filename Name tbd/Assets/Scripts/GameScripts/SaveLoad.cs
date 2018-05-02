@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using UnityEditor;
+//using UnityEditor;
 
 public static class SaveLoad {
 
@@ -30,7 +30,7 @@ public static class SaveLoad {
 
             file.Close();
 
-            AssetDatabase.ImportAsset(path);
+            //AssetDatabase.ImportAsset(path);
 
         }
         catch (System.Exception e)

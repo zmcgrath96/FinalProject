@@ -190,6 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   enemyTarget: {fileID: 0}
+  attackCount: 0
 --- !u!114 &114353053063507196
 MonoBehaviour:
   m_ObjectHideFlags: 1

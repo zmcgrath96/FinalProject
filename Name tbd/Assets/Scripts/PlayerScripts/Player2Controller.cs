@@ -20,9 +20,12 @@ public class Player2Controller : MonoBehaviour
 
     public GameObject enemyTarget;
 
+    public int attackCount;
 
     void Start()
     {
+        attackCount = 20;
+
         player = GameObject.FindGameObjectWithTag("Player");
         myPlayer = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -61,8 +64,13 @@ public class Player2Controller : MonoBehaviour
         /// Attack ////
         if (isAttacking)// & !isTriggering)
         {
+            attackCount = 0;
             animator.Play("Player2Attack_Spin");
             player.GetComponent<IPlayer>().Attack();
+        }
+        else if (attackCount < 20)
+        {
+            attackCount++;
         }
         else if (move.x < 0 && (Math.Abs(move.x) > Math.Abs(move.y)))
         {
