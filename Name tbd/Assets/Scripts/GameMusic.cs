@@ -13,5 +13,9 @@ public class GameMusic : MonoBehaviour
             Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
+
+        GameObject foo = GameObject.FindGameObjectWithTag("MenuMusic");
+            Destroy(foo);
+        
 	}
 }

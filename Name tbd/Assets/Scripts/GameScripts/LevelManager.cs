@@ -23,6 +23,8 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
         if (!GameObject.Find("LevelGenerator"))
         {
             Instantiate(levelGenerator);
+            GameObject music = GameObject.FindGameObjectWithTag("MenuMusic");
+            Destroy(music);
         }
        
 

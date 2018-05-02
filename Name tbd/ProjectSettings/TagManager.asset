@@ -12,6 +12,7 @@ TagManager:
   - Leaderboard
   - Music
   - NameInput
+  - MenuMusic
   layers:
   - Default
   - TransparentFX

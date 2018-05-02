@@ -1,13 +1,19 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Interfaces/IPlayer.cs">
+﻿<Properties StartupConfiguration="{AC72F126-426E-43F0-8440-236E03EBDD84}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneScripts/MainMenu.cs">
     <Files>
       <File FileName="Assets/Scripts/Interfaces/IPlayer.cs" Line="89" Column="35" />
       <File FileName="Assets/Scripts/GameScripts/HealthBarScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameMusic.cs" Line="20" Column="21" />
+      <File FileName="Assets/Scripts/MenuMusic.cs" Line="15" Column="44" />
+      <File FileName="Assets/Scripts/GameScripts/LevelManager.cs" Line="27" Column="8" />
+      <File FileName="Assets/Scripts/SceneScripts/MainMenu.cs" Line="11" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Name_220tbd PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>
