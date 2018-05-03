@@ -15,22 +15,46 @@ public class MuffinMan : IEnemy
 
     int doOnce = 0;
 
+
+    /* Start
+    * @param none
+    * @return none
+    * Called on start of muffinMan
+    */
     void Start()
     {
         animator = GetComponent<Animator>();
         letMove = false;
     }
 
+
+    /* SetMove
+    * @param bool
+    * @return none
+    * sets value of letMove
+    */
     public void SetMove(bool value)
     {
         letMove = value;
     }
 
+
+    /* GetMove
+    * @param none
+    * @return bool
+    * returns letMove
+    */
     bool GetMove()
     {
         return letMove;
     }
 
+
+    /* FixedUpdate
+    * @param none
+    * @return none
+    * Called every .02s 
+    */
     public void FixedUpdate()
     {
         current = transform.position;
@@ -76,12 +100,24 @@ public class MuffinMan : IEnemy
         }
     }
 
+
+    /* TakeDamage
+    * @param int
+    * @return none
+    * Reduces health of character
+    */
     public void TakeDamage(int damageTaken)
     {
         animator.SetTrigger("MuffinMan_Hurt");
         Health = Health - damageTaken;
     }
 
+
+    /* Attack
+    * @param none
+    * @return none
+    * Uses attack animation of this character
+    */
     public void Attack()
     {
         /// Attack Left ////
@@ -106,14 +142,32 @@ public class MuffinMan : IEnemy
         }
     }
 
+
+    /* setSpeed
+    * @param int
+    * @return none
+    * void 
+    */
     public void setSpeed(int speed)
     {
     }
 
+
+    /* setHealth
+    * @param int
+    * @return none
+    * void 
+    */
     public void setHealth(int health)
     {
     }
 
+
+    /* isDead
+    * @param none
+    * @return bool
+    * void 
+    */
     public bool isDead()
     {
         if (Health <= 0)
