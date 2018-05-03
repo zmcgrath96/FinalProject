@@ -37,6 +37,11 @@ public interface ICharacter{
 	**/
 	bool isDead ();
 
+    /**
+     * Destroys the characted when it dies
+    * @Param None
+    * @Return None
+    **/
 	void Die ();
 
 }

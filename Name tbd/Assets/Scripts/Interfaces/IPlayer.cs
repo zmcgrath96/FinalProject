@@ -42,7 +42,11 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
         playerName = myPlayer.name;
 
     }
-
+    /**
+     * Takes Damage given to the character
+     * @Param int damageTaken
+     * @Return None
+    **/
 	public void TakeDamage (int damageTaken)
     {
         if (!Invinc)
@@ -68,6 +72,12 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
         else { Debug.Log("My Health:"+Health); }
 	}
 
+    /**
+     * When the player attacks it determines if there is an enemy to do 
+     * damage to or not
+     * @Param None
+     * @Return None
+    **/
 	public void Attack()
 	{
 		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
@@ -83,42 +93,71 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
 
 		}
 	}
-
+    /**
+     * Shows text when the player picks up invincibility power up
+     * @Param None
+     * @Return None
+    **/
     void ShowInvinc()
     {
         invincImage = GameObject.Find("InvincibilityImage");
         invincText = GameObject.Find("InvincibilityText").GetComponent<Text>();
         invincText.text = "Invincible!";
     }
-
+    /**
+     * Hides the text that shows when you pick up invincibility
+     * @Param None
+     * @Return None
+    **/
     void HideInvinc()
     {
         invincImage.SetActive(false);
     }
-
+    /**
+      * Shows text when the player picks up attack power up
+      * @Param None
+      * @Return None
+     **/
     void ShowAttackBonus()
     {
         AttackBonusImage = GameObject.Find("AttackBonusImage");
         AttackBonusText = GameObject.Find("AttackBonusText").GetComponent<Text>();
         AttackBonusText.text = "Attack Bonus!";
     }
-
+    /**
+     * Hides the text that shows when you pick up attack power up
+     * @Param None
+     * @Return None
+    **/
     void HideAttackBonus()
     {
         AttackBonusImage.SetActive(false);
     }
-
+    /**
+     * void
+     * @Param int speed
+     * @Return None
+    **/
     public void setSpeed (int speed)
     {
 	}
 
+    /**
+     * Sets the health for the player
+     * @Param int health
+     * @Return None
+    **/
 	public void setHealth(int health)
     {
 		HealthBarScript.health = health;
         Health = health;
-        Debug.Log("Health:"+Health);
 	}
 
+    /**
+     * Gets the health of the player
+     * @Param None
+     * @Return Health
+    **/
     public int getHealth()
     {
         return Health;

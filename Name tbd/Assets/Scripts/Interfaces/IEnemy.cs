@@ -40,6 +40,11 @@ public class IEnemy : MonoBehaviour, ICharacter
         }
     }
 
+    /**
+    * Does Damage to a player when it is struck by an enemy
+    * @Param Damage Taken
+    * @Return bool
+    **/
     public void TakeDamage(int damageTaken)
     {
         if (isDead() == false)
@@ -56,20 +61,38 @@ public class IEnemy : MonoBehaviour, ICharacter
             Health = Health - damageTaken;
         }
     }
-
+    /**
+    * Void
+    * @Param None
+    * @Return None
+    **/
     public void Attack()
     {
-
     }
-
+    /**
+     * Void
+     * @Param int Speed
+     * @Return None
+    **/
     public void setSpeed(int speed)
     {
     }
 
+    /**
+     * Void
+     * @Param int Health
+     * @Return None
+    **/
     public void setHealth(int health)
     {
     }
 
+    /**
+     * Returns True if the player is dead and returns false if the player is 
+     * not dead
+     * @Param None
+     * @Return Bool
+    **/
     public bool isDead()
     {
         if (Health <= 0)
@@ -83,6 +106,11 @@ public class IEnemy : MonoBehaviour, ICharacter
         }
     }
 
+    /**
+    * Destroys the character when it dies
+    * @Param None
+    * @Return None
+    **/
     public void Die()
     {
         if (doOnce == 0)
