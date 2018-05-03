@@ -2,5 +2,10 @@ Unity "Roguelike" Tutorial
 Unity "Survival Shooter" Tutorial
 
 Sprites from OpenGameArt.org
-"Dungeon Crawl" (Floor/Wall sprites) by Chris Hamons
-"Super Candy Set" (Candy Power-ups) by Master484
+"Dungeon Crawl" (Floor/Wall sprites) by Chris Hamons https://opengameart.org/content/dungeon-crawl-32x32-tiles
+"Super Candy Set" (Candy Power-ups) by Master484 https://opengameart.org/content/super-candy-set-m484-games
+
+Music from OpenGameArt.org
+"Orchestral Battle Music" by Zefz https://opengameart.org/content/orchestral-battle-music
+"Battle Music" by Alexandr Zhelanov https://opengameart.org/content/battle-music
+"RPG-To Arms! Battle Music 1" by Hitctrl https://opengameart.org/content/rpg-to-arms-battle-music-1
