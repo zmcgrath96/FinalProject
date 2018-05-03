@@ -87,9 +87,9 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
     /**
          * @param none
          * @return none
-         * Called once every .02s, checks to see if the level is over
+         * Called based on clock time, checks to see if the level is over
          */
-    void FixedUpdate()
+    void Update()
     {
         //Debug.Log("isLoading is: " + isLoading);
         if (SceneManager.GetActiveScene().isLoaded)
