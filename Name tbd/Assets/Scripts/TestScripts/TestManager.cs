@@ -9,7 +9,7 @@ public class TestManager : MonoBehaviour, ITestEventSystem {
     public GameObject mainCharacter;
 
 
-    /* Awake
+    /** Awake
      * @param none
      * @return none
      * Called when the game object is called
@@ -20,7 +20,7 @@ public class TestManager : MonoBehaviour, ITestEventSystem {
     }
 
 
-    /* StartTest
+    /** StartTest
      * @param none
      * @return none
      * Sets up board, spawns player, and starts the test level
@@ -38,7 +38,7 @@ public class TestManager : MonoBehaviour, ITestEventSystem {
         SpawnTestPlayer();
     }
 
-    /* SpawnTestPlayer
+    /** SpawnTestPlayer
      * @param none
      * @return none
      * Spawns the controlled player for testing
@@ -48,7 +48,7 @@ public class TestManager : MonoBehaviour, ITestEventSystem {
         mainCharacter = Instantiate(mainCharacter) as GameObject;
         testLevel.PlacePlayer(mainCharacter);
     }
-    /* EndTest
+    /** EndTest
        * @param none
        * @return none
        * Ends the test mode
@@ -58,7 +58,7 @@ public class TestManager : MonoBehaviour, ITestEventSystem {
         SceneManager.LoadScene("MainMenu");
     }
 
-    /*
+    /**
      * Null Method used to fulfill ITestEventSystem
      *
      */

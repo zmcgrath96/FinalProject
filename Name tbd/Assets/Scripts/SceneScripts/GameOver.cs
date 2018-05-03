@@ -11,7 +11,7 @@ public class GameOver : MonoBehaviour {
     private List<string> vals;
     private List<string[]> stats;
 
-    /* Awake
+    /** Awake
      * @param none
      * @return none
      * Starts the Game Over scene
@@ -35,7 +35,7 @@ public class GameOver : MonoBehaviour {
 
 
 
-    /* ShowLeaderboard
+    /** ShowLeaderboard
      * @param none
      * @return none
      * shows the leaderboard
@@ -52,7 +52,7 @@ public class GameOver : MonoBehaviour {
         SaveLeaderboard();
     }
 
-    /* UpdateLeaderboard
+    /** UpdateLeaderboard
      * @param none
      * @return none
      * updates the leaderboard
@@ -109,7 +109,7 @@ public class GameOver : MonoBehaviour {
 
     }
 
-    /* SetLeaderboardText
+    /** SetLeaderboardText
      * @param none
      * @return none
      * sets the leaderboard text
@@ -125,7 +125,7 @@ public class GameOver : MonoBehaviour {
         }
     }
 
-    /* SaveLeaderboard
+    /** SaveLeaderboard
      * @param none
      * @return none
      * saves leaderboard
@@ -145,12 +145,12 @@ public class GameOver : MonoBehaviour {
 	 * Loads MainMenu
 	 * @Param None
 	 * @Return None
-	**/
+	 */
 	public void toMainMenu(){
         SaveLeaderboard();
 		SceneManager.LoadScene ("MainMenu");
 	}
-  /* QuitGame
+  /** QuitGame
    * @param none
    * @return none
    * exits the game

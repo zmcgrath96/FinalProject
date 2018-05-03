@@ -5,7 +5,7 @@ using System.Collections;
 public class TestLoader : MonoBehaviour
 {
     public TestManager testManager;          //TestManager prefab to instantiate.
-    /* Awake
+    /** Awake
        * @param none
        * @return none
        * Loads the test mode

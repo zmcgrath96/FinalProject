@@ -16,10 +16,10 @@ public class Jack : IEnemy
     int doOnce = 0;
 
 
-/* Start
+/** Start
     * @param none
     * @return none
-    * Called on start of Jack 
+    * Called on start of Jack
     */
     void Start()
     {
@@ -28,7 +28,7 @@ public class Jack : IEnemy
     }
 
 
-    /* SetMove
+    /** SetMove
     * @param bool
     * @return none
     * Sets the value of move to input value
@@ -39,7 +39,7 @@ public class Jack : IEnemy
     }
 
 
-    /* GetMove
+    /** GetMove
     * @param none
     * @return bool
     * Returns value of letMove
@@ -50,10 +50,10 @@ public class Jack : IEnemy
     }
 
 
-    /* FixedUpdate
+    /** FixedUpdate
     * @param none
     * @return none
-    * Called every .02 sec 
+    * Called every .02 sec
     */
     public void FixedUpdate()
     {
@@ -101,7 +101,7 @@ public class Jack : IEnemy
     }
 
 
-    /* TakeDamage
+    /** TakeDamage
     * @param int
     * @return none
     * Reduces health of gameobject
@@ -113,7 +113,7 @@ public class Jack : IEnemy
     }
 
 
-    /* Attack
+    /** Attack
     * @param none
     * @return none
     * attack animation for player
@@ -143,7 +143,7 @@ public class Jack : IEnemy
     }
 
 
-    /* setSpeed
+    /** setSpeed
     * @param int
     * @return none
     * void
@@ -153,7 +153,7 @@ public class Jack : IEnemy
     }
 
 
-    /* setHealth
+    /** setHealth
     * @param int
     * @return none
     * void
@@ -163,7 +163,7 @@ public class Jack : IEnemy
     }
 
 
-    /* isDead
+    /** isDead
     * @param none
     * @return bool
     * Checks to see if character is dead

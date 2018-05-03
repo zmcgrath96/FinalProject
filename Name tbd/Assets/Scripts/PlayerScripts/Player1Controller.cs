@@ -38,7 +38,7 @@ public class Player1Controller : MonoBehaviour
 	 * Updates the character position every 0.02 seconds. Controls all movement of the character
 	 * @Param None
 	 * @Return None
-	**/
+	 */
     void FixedUpdate()
     {
         Vector2 move = new Vector2(CrossPlatformInputManager.GetAxis("Horizontal"), CrossPlatformInputManager.GetAxis("Vertical"));
@@ -99,6 +99,6 @@ public class Player1Controller : MonoBehaviour
             //animator.Play("Player1Idle");
             myPlayer.velocity = Vector3.zero;
         }
-       
+
     }
 }

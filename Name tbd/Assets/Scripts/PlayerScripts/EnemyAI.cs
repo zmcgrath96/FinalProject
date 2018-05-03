@@ -16,9 +16,9 @@ public class EnemyAI : MonoBehaviour, ITestEventSystem {
     Jack jack;
     public string enemyName;
     IEnemy myEnemy;
-    
 
-    /* Awake
+
+    /** Awake
      * @param none
      * @return none
      * Called to start the script and initializes canMove to false
@@ -54,7 +54,7 @@ public class EnemyAI : MonoBehaviour, ITestEventSystem {
 	 * Updates every 0.02 seconds prompting the Enemy to follow the main player
 	 * @Param None
 	 * @Return None
-	**/
+	 */
     void FixedUpdate()
     {
 
@@ -104,7 +104,7 @@ public class EnemyAI : MonoBehaviour, ITestEventSystem {
                 {
                     attackDelay = 0;
                     TryAttack();
-                    
+
                 }*/
 
             }
@@ -113,7 +113,7 @@ public class EnemyAI : MonoBehaviour, ITestEventSystem {
         {
             canMove = false;
         }
-        
+
     }
 
 
@@ -121,7 +121,7 @@ public class EnemyAI : MonoBehaviour, ITestEventSystem {
 	 * Attempts to attack the main player within a certain radius.
 	 * @Param None
 	 * @Return None
-	**/
+	 */
 	public void TryAttack()
     {
 		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
@@ -129,7 +129,7 @@ public class EnemyAI : MonoBehaviour, ITestEventSystem {
 		while (i < hitColliders.Length) {
 			if (hitColliders [i].tag == "Player")
             {
-                
+
                 if (enemyName == "MuffinMan")
                 {
                     muffinMan.GetComponent<MuffinMan>().Attack();
@@ -140,22 +140,22 @@ public class EnemyAI : MonoBehaviour, ITestEventSystem {
                     jack.GetComponent<Jack>().Attack();
                     hitColliders[i].GetComponent<IPlayer>().TakeDamage(10);
                 }
-                
+
                 //muffinMan.GetComponent<MuffinMan>().Attack();
 
                 //hitColliders [i].GetComponent<IPlayer>().TakeDamage (5);
                 //Debug.Log (hitColliders [i].GetComponent<IPlayer> ().Health);
-			} 
+			}
 			i++;
 		}
 	}
 
 
 
-    /* StartTest
+    /** StartTest
     * @param none
     * @return none
-    * Called by EventSystemHandler from ITestEventSystem 
+    * Called by EventSystemHandler from ITestEventSystem
     */
     public void StartTest()
     {
@@ -164,13 +164,13 @@ public class EnemyAI : MonoBehaviour, ITestEventSystem {
     }
 
 
-    /* EndTest
+    /** EndTest
     * @param none
     * @return none
-    * Called by EventSystemHandler from ITestEventSystem 
+    * Called by EventSystemHandler from ITestEventSystem
     */
     public void EndTest()
     {
-   
+
     }
 }

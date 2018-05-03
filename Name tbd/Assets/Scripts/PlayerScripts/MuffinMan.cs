@@ -16,7 +16,7 @@ public class MuffinMan : IEnemy
     int doOnce = 0;
 
 
-    /* Start
+    /** Start
     * @param none
     * @return none
     * Called on start of muffinMan
@@ -28,7 +28,7 @@ public class MuffinMan : IEnemy
     }
 
 
-    /* SetMove
+    /** SetMove
     * @param bool
     * @return none
     * sets value of letMove
@@ -39,7 +39,7 @@ public class MuffinMan : IEnemy
     }
 
 
-    /* GetMove
+    /** GetMove
     * @param none
     * @return bool
     * returns letMove
@@ -50,10 +50,10 @@ public class MuffinMan : IEnemy
     }
 
 
-    /* FixedUpdate
+    /** FixedUpdate
     * @param none
     * @return none
-    * Called every .02s 
+    * Called every .02s
     */
     public void FixedUpdate()
     {
@@ -101,7 +101,7 @@ public class MuffinMan : IEnemy
     }
 
 
-    /* TakeDamage
+    /** TakeDamage
     * @param int
     * @return none
     * Reduces health of character
@@ -113,7 +113,7 @@ public class MuffinMan : IEnemy
     }
 
 
-    /* Attack
+    /** Attack
     * @param none
     * @return none
     * Uses attack animation of this character
@@ -143,30 +143,30 @@ public class MuffinMan : IEnemy
     }
 
 
-    /* setSpeed
+    /** setSpeed
     * @param int
     * @return none
-    * void 
+    * void
     */
     public void setSpeed(int speed)
     {
     }
 
 
-    /* setHealth
+    /** setHealth
     * @param int
     * @return none
-    * void 
+    * void
     */
     public void setHealth(int health)
     {
     }
 
 
-    /* isDead
+    /** isDead
     * @param none
     * @return bool
-    * void 
+    * void
     */
     public bool isDead()
     {

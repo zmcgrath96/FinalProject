@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class InputName : MonoBehaviour {
 
-	/* SubmitName
+	/** SubmitName
 	 * @param none
    * @return none
 	 * Submits the user's name

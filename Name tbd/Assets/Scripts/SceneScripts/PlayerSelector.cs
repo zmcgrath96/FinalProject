@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerSelector : MonoBehaviour {
-	/* SelectGingy
+	/** SelectGingy
 	 * @param none
 	 * @return none
 	 * Selects gingy as the player
@@ -14,7 +14,7 @@ public class PlayerSelector : MonoBehaviour {
         GameVariables.CharacterName = "Gingy";
         Invoke("StartGame", .2f);
     }
-		/* SelectShadowGingy
+		/** SelectShadowGingy
 		 * @param none
 		 * @return none
 		 * Selects Shadow Gingy as the player
@@ -24,7 +24,7 @@ public class PlayerSelector : MonoBehaviour {
         GameVariables.CharacterName = "ShadowGingy";
         Invoke("StartGame", .2f);
     }
-		/* StartGame
+		/** StartGame
 		 * @param none
 		 * @return none
 		 * Starts the game

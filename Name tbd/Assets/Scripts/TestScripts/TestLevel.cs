@@ -24,7 +24,7 @@ public class TestLevel : MonoBehaviour {
     public GameObject invincibleItemSpawner;
     public GameObject attackItemSpawner;
 
-    /* BuildTestLevel
+    /** BuildTestLevel
      * @param none
      * @return none
      * In Charge building and setting up the test level
@@ -37,7 +37,7 @@ public class TestLevel : MonoBehaviour {
 
 
 
-    /* FloorSetup
+    /** FloorSetup
      * @param none
      * @return none
      * Builds a 30x30 map for testing
@@ -66,7 +66,7 @@ public class TestLevel : MonoBehaviour {
     }
 
 
-    /* PlacePlayer
+    /** PlacePlayer
      * @param GameObject mainCharacter
      * @return none
      * Places the mainCharacter in the bottom left hand corner
@@ -78,7 +78,7 @@ public class TestLevel : MonoBehaviour {
     }
 
 
-    /* PlaceSpawners
+    /** PlaceSpawners
      * @param none
      * @return none
      * Places the spawners in the central area of the map
@@ -100,9 +100,9 @@ public class TestLevel : MonoBehaviour {
 
     }
 
-    
-    /*  SpawnObject
-     * @param GameObject 
+
+    /**  SpawnObject
+     * @param GameObject
      * @return none
      * Spawns GameObject passed in to a random spot in the map
      */

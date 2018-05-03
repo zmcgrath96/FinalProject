@@ -7,7 +7,7 @@ public class Gingy : IPlayer
 	//public int Health = 100;
 
 
-    /* GetHealth
+    /** GetHealth
     * @param none
     * @return int
     * returns health
@@ -17,7 +17,7 @@ public class Gingy : IPlayer
         return Health;
     }
 
-    /* SetHealth
+    /** SetHealth
     * @param int
     * @return none
     * Sets the health

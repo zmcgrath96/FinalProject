@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     public GameObject manual;
-    /* Awake
+    /** Awake
      * @param none
      * @return none
      * Opens the main menu
@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour {
 	 * Loads the scene to play the game
 	 * @Param None
 	 * @Return None
-	**/
+	 */
 	public void PlayGame(){
 		SceneManager.LoadScene ("InputName");
 	}
@@ -29,12 +29,12 @@ public class MainMenu : MonoBehaviour {
 	 * Quits the application
 	 * @Param None
 	 * @Return None
-	**/
+	 */
 	public void QuitGame(){
 		Application.Quit ();
 	}
 
-    /* TestMode
+    /** TestMode
      * @param none
      * @return none
      * Allows the user to go into test mode of the game
@@ -43,7 +43,7 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("TestMode");
     }
-    /* ToManual
+    /** ToManual
      * @param none
      * @return none
      * Allows the user to go into the manual
@@ -52,7 +52,7 @@ public class MainMenu : MonoBehaviour {
     {
         manual.SetActive(true);
     }
-    /* BackHome
+    /** BackHome
      * @param none
      * @return none
      * Allows the user to go back to the menu

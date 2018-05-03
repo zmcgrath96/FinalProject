@@ -36,13 +36,13 @@ public class Player2Controller : MonoBehaviour
 
     //float playerDelta(float a, float b)
     //{
-    //    return a - b; 
+    //    return a - b;
     //}
     /**
 	 * Updates the character position every 0.02 seconds. Controls all movement of the character
 	 * @Param None
 	 * @Return None
-	**/
+	 */
     void FixedUpdate()
     {
         Vector2 move = new Vector2(CrossPlatformInputManager.GetAxis("Horizontal"), CrossPlatformInputManager.GetAxis("Vertical"));
