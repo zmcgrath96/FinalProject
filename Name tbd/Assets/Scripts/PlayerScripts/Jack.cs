@@ -15,22 +15,46 @@ public class Jack : IEnemy
 
     int doOnce = 0;
 
+
+/* Start
+    * @param none
+    * @return none
+    * Called on start of Jack 
+    */
     void Start()
     {
         animator = GetComponent<Animator>();
         letMove = false;
     }
 
+
+    /* SetMove
+    * @param bool
+    * @return none
+    * Sets the value of move to input value
+    */
     public void SetMove(bool value)
     {
         letMove = value;
     }
 
+
+    /* GetMove
+    * @param none
+    * @return bool
+    * Returns value of letMove
+    */
     bool GetMove()
     {
         return letMove;
     }
 
+
+    /* FixedUpdate
+    * @param none
+    * @return none
+    * Called every .02 sec 
+    */
     public void FixedUpdate()
     {
         current = transform.position;
@@ -76,12 +100,24 @@ public class Jack : IEnemy
         }
     }
 
+
+    /* TakeDamage
+    * @param int
+    * @return none
+    * Reduces health of gameobject
+    */
     public void TakeDamage(int damageTaken)
     {
         animator.SetTrigger("Jack_Hurt");
         Health = Health - damageTaken;
     }
 
+
+    /* Attack
+    * @param none
+    * @return none
+    * attack animation for player
+    */
     public void Attack()
     {
         /// Attack Left ////
@@ -106,14 +142,32 @@ public class Jack : IEnemy
         }
     }
 
+
+    /* setSpeed
+    * @param int
+    * @return none
+    * void
+    */
     public void setSpeed(int speed)
     {
     }
 
+
+    /* setHealth
+    * @param int
+    * @return none
+    * void
+    */
     public void setHealth(int health)
     {
     }
 
+
+    /* isDead
+    * @param none
+    * @return bool
+    * Checks to see if character is dead
+    */
     public bool isDead()
     {
         if (Health <= 0)
