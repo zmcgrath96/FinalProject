@@ -239,9 +239,10 @@ namespace Completed
         {
             bool tooClose = false;
             Vector3 delta;
-            foreach (Vector3 enemyPos in enemyPositions)
+            GameObject[] enemiesPlaced = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in enemiesPlaced)
             {
-                delta = position - enemyPos;
+                delta = position - enemy.transform.position;
                 if (Math.Abs(delta.magnitude) >= 2)
                 {
                     tooClose = false;
@@ -268,7 +269,7 @@ namespace Completed
             //Vector3 delta;
             playerPos = pickPlayerPostion();
 
-            while(ReplacePlayer(playerPos) == true)
+            while(ReplacePlayer(playerPos))
             {
                 playerPos = pickPlayerPostion();
             }
