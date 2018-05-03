@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour {
 	public static bool GameIsPaused = false;
 	public GameObject pauseMenuUI;
 	public Button PauseButton;
-    
+
 
 
 
@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour {
      * Resumes time in-game
      * @Param None
      * @Return None
-    **/
+     */
 	public void Resume() {
 		pauseMenuUI.SetActive (false);
 		Time.timeScale = 1f;
@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour {
      * Pauses time in-game
      * @Param None
      * @Return None
-    **/
+     */
 	public void Pause (){
 		pauseMenuUI.SetActive (true);
 		Time.timeScale = 0f;
@@ -42,14 +42,14 @@ public class PauseMenu : MonoBehaviour {
      * Makes sure to resume time when the main menu option is selected
      * @Param None
      * @Return None
-    **/
+     */
 	public void Menu(){
 		Time.timeScale = 1f;
 		Destroy(GameObject.Find("GameManager"));
 		SceneManager.LoadScene ("MainMenu");
 	}
-	
-   
+
+
 
 	// Update is called once per frame
 	void Update () {

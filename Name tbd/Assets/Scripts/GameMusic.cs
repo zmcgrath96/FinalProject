@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameMusic : MonoBehaviour
 {
-	/* Awake
+	/** Awake
 	 * @param none
 	 * @return none
 	 * Stops the menu music and starts the game music

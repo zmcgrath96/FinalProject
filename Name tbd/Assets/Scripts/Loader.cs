@@ -6,7 +6,7 @@ public class Loader : MonoBehaviour
 {
     public GameManager gameManager;          //GameManager prefab to instantiate.
 
-    /* Awake
+    /** Awake
        * @param none
        * @return none
        * Loads the Game Manager

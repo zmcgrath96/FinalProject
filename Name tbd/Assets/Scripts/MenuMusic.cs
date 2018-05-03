@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MenuMusic : MonoBehaviour
 {
-  /* Awake
+  /** Awake
    * @param none
    * @return none
    * Allows only one instance of menu music to play
