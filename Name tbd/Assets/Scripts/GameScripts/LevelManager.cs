@@ -26,7 +26,7 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
             GameObject music = GameObject.FindGameObjectWithTag("MenuMusic");
             Destroy(music);
         }
-       
+
 
     }
 
@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
         GameVariables.LevelDuration = 0;
         mainCharacter = character;
         levelGenerator.SetupScene(level, mainCharacter);
-    
+
     }
 
     /* getNumEnemies
@@ -72,7 +72,11 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
         else return false;
     }
 
-
+    /* NextLevel
+         * @param none
+         * @return none
+         * Loads the next level
+         */
     void NextLevel()
     {
         GameObject target = GameObject.Find("GameManager");
@@ -97,7 +101,7 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
             }
         }
         GameVariables.LevelDuration += .02;
-        
+
     }
 
 

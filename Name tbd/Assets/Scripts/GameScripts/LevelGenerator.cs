@@ -343,13 +343,17 @@ namespace Completed
             return returnNum;
         }
 
-
+        /* ClearMap
+             * @param none
+             * @return none
+             * Clears the entire map
+             */
         public void ClearMap()
         {
             map.gridPositions.Clear();
             map.floorPositions.Clear();
             enemyPositions.Clear();
-          
+
         }
     }
 }
