@@ -30,7 +30,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
 	{
         animator = GetComponent<Animator>();
         setHealth(100);
-        setAttack(20);
+        setAttack(10);
         setInvincibility(false);
         setADuration(0);
         setIDuration(0);

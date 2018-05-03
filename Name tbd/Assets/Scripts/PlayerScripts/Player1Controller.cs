@@ -62,8 +62,13 @@ public class Player1Controller : MonoBehaviour
         {
             attackCount = 0;
             animator.Play("Player1Attack_Spin");
-			player.GetComponent<IPlayer>().Attack();
+            player.GetComponent<IPlayer>().Attack();
         }
+        /*else if (attackCount == 10)
+        {
+            player.GetComponent<IPlayer>().Attack();
+            attackCount++;
+        }*/
         else if (attackCount < 20)
         {
             attackCount++;

@@ -229,17 +229,49 @@ namespace Completed
             }
         }
 
-        /* PlacePlayer
-         * @param GameObject Player
-         * @return none
-         * Places the player randomly in the map outside of the range of enemies
+
+        /* ReplacePlayer
+         * @param Vector3 position
+         * @return bool
+         * Tells if the playerPos is too close to enemies
          */
-        void PlacePlayer(GameObject Player)
+        bool ReplacePlayer(Vector3 position)
+        {
+            bool tooClose = false;
+            Vector3 delta;
+            foreach (Vector3 enemyPos in enemyPositions)
+            {
+                delta = position - enemyPos;
+                if (Math.Abs(delta.magnitude) >= 2)
+                {
+                    tooClose = false;
+                }
+                else
+                {
+                    tooClose = true;
+                    return true;
+                }
+            }
+            return tooClose;
+        }
+
+
+            /* PlacePlayer
+             * @param GameObject Player
+             * @return none
+             * Places the player randomly in the map outside of the range of enemies
+             */
+            void PlacePlayer(GameObject Player)
         {
 
-            bool tooClose;
-            Vector3 delta;
+            //bool tooClose;
+            //Vector3 delta;
             playerPos = pickPlayerPostion();
+
+            while(ReplacePlayer(playerPos) == true)
+            {
+                playerPos = pickPlayerPostion();
+            }
 
             // Make sure that the player isn't placed too close to the enemy
             //do
