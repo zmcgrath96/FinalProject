@@ -11,6 +11,11 @@ public class GameOver : MonoBehaviour {
     private List<string> vals;
     private List<string[]> stats;
 
+    /* Awake
+     * @param none
+     * @return none
+     * Starts the Game Over scene
+     */
     public void Awake()
     {
         GameObject music = GameObject.FindGameObjectWithTag("Music");
@@ -27,10 +32,14 @@ public class GameOver : MonoBehaviour {
         }
         Invoke("ShowLeaderboard", 3f);
     }
-        
 
 
 
+    /* ShowLeaderboard
+     * @param none
+     * @return none
+     * shows the leaderboard
+     */
     public void ShowLeaderboard()
     {
         gameOverText.SetActive(false);
@@ -43,7 +52,11 @@ public class GameOver : MonoBehaviour {
         SaveLeaderboard();
     }
 
-
+    /* UpdateLeaderboard
+     * @param none
+     * @return none
+     * updates the leaderboard
+     */
     private void UpdateLeaderboard()
     {
         vals = SaveLoad.Load();                                                 // vals is a List<string> where each string is name,level,duration
@@ -85,7 +98,7 @@ public class GameOver : MonoBehaviour {
 
                     break;
                 }
-                
+
             }
         }
         else
@@ -93,10 +106,14 @@ public class GameOver : MonoBehaviour {
 
         while (stats.Count > 10)
             stats.RemoveAt(stats.Count - 1);
-        
+
     }
 
-
+    /* SetLeaderboardText
+     * @param none
+     * @return none
+     * sets the leaderboard text
+     */
     private void SetLeaderboardText()
     {
         int rank = 1;
@@ -108,7 +125,11 @@ public class GameOver : MonoBehaviour {
         }
     }
 
-
+    /* SaveLeaderboard
+     * @param none
+     * @return none
+     * saves leaderboard
+     */
     private void SaveLeaderboard()
     {
         while (vals.Count > 0)
@@ -129,11 +150,15 @@ public class GameOver : MonoBehaviour {
         SaveLeaderboard();
 		SceneManager.LoadScene ("MainMenu");
 	}
-
+  /* QuitGame
+   * @param none
+   * @return none
+   * exits the game
+   */
     public void QuitGame()
     {
         SaveLeaderboard();
         Application.Quit();
     }
-		
+
 }
