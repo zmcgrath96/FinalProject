@@ -9,6 +9,12 @@ public static class GameVariables {
     private static double levelDuration;
     private static string playerName;
 
+
+    /* CharacterName
+    * @param none
+    * @return none
+    * Allows for public access to private variable characterName 
+    */
     public static string CharacterName
     {
         get
@@ -21,6 +27,12 @@ public static class GameVariables {
         }
     }
 
+
+    /* LevelReached
+    * @param none
+    * @return none
+    * Allows for public access to private variable levelReached
+    */
     public static int LevelReached
     {
         get
@@ -33,6 +45,12 @@ public static class GameVariables {
         }
     }
 
+
+    /* LevelDuration
+    * @param none
+    * @return none
+    * Allows for public access to private variable LevelDuration
+    */
     public static double LevelDuration
     {
         get
@@ -46,6 +64,12 @@ public static class GameVariables {
     }
 
 
+
+    /* PlayerName
+    * @param none
+    * @return none
+    * Allows for public access to private variable playerName
+    */
     public static string PlayerName
     {
         get
