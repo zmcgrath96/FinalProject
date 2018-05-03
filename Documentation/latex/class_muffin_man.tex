@@ -1,0 +1,164 @@
+\hypertarget{class_muffin_man}{}\section{Muffin\+Man Class Reference}
+\label{class_muffin_man}\index{Muffin\+Man@{Muffin\+Man}}
+Inheritance diagram for Muffin\+Man\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_muffin_man}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_muffin_man_aa693b638b6e52ab4fed01d7113b58ca8}{Set\+Move}} (bool value)
+\item 
+void \mbox{\hyperlink{class_muffin_man_a4b71be125a1beefd38dffd5a35ac8526}{Fixed\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_muffin_man_a0285a9daaa9c7285ad76570a2166733d}{Take\+Damage}} (int damage\+Taken)
+\item 
+void \mbox{\hyperlink{class_muffin_man_af917e1ad1d45ee23bd6b7edc5d14e0c5}{Attack}} ()
+\item 
+void \mbox{\hyperlink{class_muffin_man_ad8d6f582c58fed8b43fd4a7c66ce2411}{set\+Speed}} (int speed)
+\item 
+void \mbox{\hyperlink{class_muffin_man_a4990952946d39102b3034ee93f70f20d}{set\+Health}} (int health)
+\item 
+bool \mbox{\hyperlink{class_muffin_man_a0b2cb2eb97c7452da51f40af91c7b4b3}{is\+Dead}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_muffin_man_affaf77ed95a8093c406a308399de06a1}\label{class_muffin_man_affaf77ed95a8093c406a308399de06a1}} 
+Vector3 {\bfseries current}
+\item 
+\mbox{\Hypertarget{class_muffin_man_aafcb38688b56768770d0610ce055c165}\label{class_muffin_man_aafcb38688b56768770d0610ce055c165}} 
+Vector3 {\bfseries target}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_muffin_man_af917e1ad1d45ee23bd6b7edc5d14e0c5}\label{class_muffin_man_af917e1ad1d45ee23bd6b7edc5d14e0c5}} 
+\index{Muffin\+Man@{Muffin\+Man}!Attack@{Attack}}
+\index{Attack@{Attack}!Muffin\+Man@{Muffin\+Man}}
+\subsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily void Muffin\+Man.\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Attack 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none Uses attack animation of this character 
+\end{DoxyReturn}
+Attack Left ////
+
+Attack Up ////
+
+Attack Down //// 
+
+Implements \mbox{\hyperlink{interface_i_character}{I\+Character}}.
+
+\mbox{\Hypertarget{class_muffin_man_a4b71be125a1beefd38dffd5a35ac8526}\label{class_muffin_man_a4b71be125a1beefd38dffd5a35ac8526}} 
+\index{Muffin\+Man@{Muffin\+Man}!Fixed\+Update@{Fixed\+Update}}
+\index{Fixed\+Update@{Fixed\+Update}!Muffin\+Man@{Muffin\+Man}}
+\subsubsection{\texorpdfstring{Fixed\+Update()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Muffin\+Man.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fixed\+Update 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none Called every .02s 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_muffin_man_a0b2cb2eb97c7452da51f40af91c7b4b3}\label{class_muffin_man_a0b2cb2eb97c7452da51f40af91c7b4b3}} 
+\index{Muffin\+Man@{Muffin\+Man}!is\+Dead@{is\+Dead}}
+\index{is\+Dead@{is\+Dead}!Muffin\+Man@{Muffin\+Man}}
+\subsubsection{\texorpdfstring{is\+Dead()}{isDead()}}
+{\footnotesize\ttfamily bool Muffin\+Man.\+is\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+is\+Dead 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_character}{I\+Character}}.
+
+\mbox{\Hypertarget{class_muffin_man_a4990952946d39102b3034ee93f70f20d}\label{class_muffin_man_a4990952946d39102b3034ee93f70f20d}} 
+\index{Muffin\+Man@{Muffin\+Man}!set\+Health@{set\+Health}}
+\index{set\+Health@{set\+Health}!Muffin\+Man@{Muffin\+Man}}
+\subsubsection{\texorpdfstring{set\+Health()}{setHealth()}}
+{\footnotesize\ttfamily void Muffin\+Man.\+set\+Health (\begin{DoxyParamCaption}\item[{int}]{health }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set\+Health 
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_character}{I\+Character}}.
+
+\mbox{\Hypertarget{class_muffin_man_aa693b638b6e52ab4fed01d7113b58ca8}\label{class_muffin_man_aa693b638b6e52ab4fed01d7113b58ca8}} 
+\index{Muffin\+Man@{Muffin\+Man}!Set\+Move@{Set\+Move}}
+\index{Set\+Move@{Set\+Move}!Muffin\+Man@{Muffin\+Man}}
+\subsubsection{\texorpdfstring{Set\+Move()}{SetMove()}}
+{\footnotesize\ttfamily void Muffin\+Man.\+Set\+Move (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set\+Move 
+\begin{DoxyParams}{Parameters}
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none sets value of let\+Move 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_muffin_man_ad8d6f582c58fed8b43fd4a7c66ce2411}\label{class_muffin_man_ad8d6f582c58fed8b43fd4a7c66ce2411}} 
+\index{Muffin\+Man@{Muffin\+Man}!set\+Speed@{set\+Speed}}
+\index{set\+Speed@{set\+Speed}!Muffin\+Man@{Muffin\+Man}}
+\subsubsection{\texorpdfstring{set\+Speed()}{setSpeed()}}
+{\footnotesize\ttfamily void Muffin\+Man.\+set\+Speed (\begin{DoxyParamCaption}\item[{int}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set\+Speed 
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_character}{I\+Character}}.
+
+\mbox{\Hypertarget{class_muffin_man_a0285a9daaa9c7285ad76570a2166733d}\label{class_muffin_man_a0285a9daaa9c7285ad76570a2166733d}} 
+\index{Muffin\+Man@{Muffin\+Man}!Take\+Damage@{Take\+Damage}}
+\index{Take\+Damage@{Take\+Damage}!Muffin\+Man@{Muffin\+Man}}
+\subsubsection{\texorpdfstring{Take\+Damage()}{TakeDamage()}}
+{\footnotesize\ttfamily void Muffin\+Man.\+Take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage\+Taken }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Take\+Damage 
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none Reduces health of character 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_character}{I\+Character}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Muffin\+Man.\+cs\end{DoxyCompactItemize}

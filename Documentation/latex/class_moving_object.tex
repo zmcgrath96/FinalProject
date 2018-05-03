@@ -1,0 +1,40 @@
+\hypertarget{class_moving_object}{}\section{Moving\+Object Class Reference}
+\label{class_moving_object}\index{Moving\+Object@{Moving\+Object}}
+Inheritance diagram for Moving\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_moving_object}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_moving_object_a2596eb0312a148176541ac08fb18b173}\label{class_moving_object_a2596eb0312a148176541ac08fb18b173}} 
+float {\bfseries move\+Time} = 0.\+1f
+\item 
+\mbox{\Hypertarget{class_moving_object_add4cf20e336559d38cc6a57763775e36}\label{class_moving_object_add4cf20e336559d38cc6a57763775e36}} 
+Layer\+Mask {\bfseries blocking\+Layer}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_moving_object_a2b6026a8e7e4313764cb876fd99ae1cd}\label{class_moving_object_a2b6026a8e7e4313764cb876fd99ae1cd}} 
+virtual void {\bfseries Start} ()
+\item 
+\mbox{\Hypertarget{class_moving_object_a3d8df930ae96d375fc1863b483e1c2e5}\label{class_moving_object_a3d8df930ae96d375fc1863b483e1c2e5}} 
+bool {\bfseries Move} (float x\+Dir, float y\+Dir, out Raycast\+Hit2D hit)
+\item 
+\mbox{\Hypertarget{class_moving_object_ab5b0553c2da577c976c7f1416ff6605a}\label{class_moving_object_ab5b0553c2da577c976c7f1416ff6605a}} 
+I\+Enumerator {\bfseries Smooth\+Movement} (Vector3 end)
+\item 
+\mbox{\Hypertarget{class_moving_object_a9cb5a5729151a4f9745a24988176f620}\label{class_moving_object_a9cb5a5729151a4f9745a24988176f620}} 
+virtual void {\bfseries Attempt\+Move$<$ T $>$} (float x\+Dir, float y\+Dir)
+\item 
+\mbox{\Hypertarget{class_moving_object_af20de314364d109abfad1fe0f15d4732}\label{class_moving_object_af20de314364d109abfad1fe0f15d4732}} 
+abstract void {\bfseries On\+Cant\+Move$<$ T $>$} (T component)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Moving\+Object.\+cs\end{DoxyCompactItemize}
