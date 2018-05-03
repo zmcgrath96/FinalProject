@@ -14,6 +14,10 @@ public interface ICharacter{
 
 	bool isDead ();
 
+	/* Set of actions when the player dies
+	 * @param none
+	 * @return none
+	 */
 	void Die ();
 
 }
