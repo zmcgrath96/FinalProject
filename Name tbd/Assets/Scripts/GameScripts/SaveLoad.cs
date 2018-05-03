@@ -9,7 +9,7 @@ public static class SaveLoad {
     public static List<string> leaderboard;
 
 
-    private static string path = "Assets/Resources/leaderboard.txt";
+    private static string path = Application.persistentDataPath + "/leaderboard.txt";
 
 
     /* Save
