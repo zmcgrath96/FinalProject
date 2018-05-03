@@ -9,14 +9,21 @@ public class HealthBarScript : MonoBehaviour {
 	int maxHealth = 100;
 	public static float health;
 
-
-	// Use this for initialization
+	/* Start
+			 * @param none
+			 * @return none
+			 * Initializes the health bar
+			 */
 	void Start () {
 		HealthBar = GetComponent<Image> ();
 		health = IPlayer.Health;
 	}
-	
-	// Update is called once per frame
+
+	/* Update
+			 * @param none
+			 * @return none
+			 * Updates the health bar
+			 */
 	void Update () {
 		HealthBar.fillAmount = health / maxHealth;
 	}

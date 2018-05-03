@@ -151,12 +151,24 @@ public class EnemyAI : MonoBehaviour, ITestEventSystem {
 	}
 
 
+
+    /* StartTest
+    * @param none
+    * @return none
+    * Called by EventSystemHandler from ITestEventSystem 
+    */
     public void StartTest()
     {
         Debug.Log("Recieved message");
         this.canMove = true;
     }
 
+
+    /* EndTest
+    * @param none
+    * @return none
+    * Called by EventSystemHandler from ITestEventSystem 
+    */
     public void EndTest()
     {
    

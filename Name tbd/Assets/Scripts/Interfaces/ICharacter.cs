@@ -3,45 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface ICharacter{
-	/**
-	 * Takes Damage given to the character
-	 * @Param int damageTaken
-	 * @Return None
-	**/
+
 	void TakeDamage (int damageTaken);
 
-	/**
-	 * Attacks another character
-	 * @Param None
-	 * @Return None
-	**/
 	void Attack ();
-	/**
-	 * sets the speed of a character
-	 * @Param int speed
-	 * @Return None
-	**/
+	
 	void setSpeed (int speed);
 
-	/**
-	 * sets the health of a character
-	 * @Param int health
-	 * @Return None
-	**/
 	void setHealth(int health);
 
-	/**
-	 * Returns if the player is dead or not
-	 * @Param None
-	 * @Return bool
-	**/
 	bool isDead ();
 
+<<<<<<< HEAD
     /**
      * Destroys the characted when it dies
     * @Param None
     * @Return None
     **/
+=======
+	/* Set of actions when the player dies
+	 * @param none
+	 * @return none
+	 */
+>>>>>>> 64bd956d414a0125c776032427f41857266730ad
 	void Die ();
 
 }

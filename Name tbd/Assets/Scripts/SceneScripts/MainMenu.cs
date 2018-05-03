@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     public GameObject manual;
+    /* Awake
+     * @param none
+     * @return none
+     * Opens the main menu
+     */
     public void Awake()
     {
         GameObject music = GameObject.FindGameObjectWithTag("Music");
@@ -38,12 +43,20 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("TestMode");
     }
-	
+    /* ToManual
+     * @param none
+     * @return none
+     * Allows the user to go into the manual
+     */
     public void ToManual()
     {
         manual.SetActive(true);
     }
-
+    /* BackHome
+     * @param none
+     * @return none
+     * Allows the user to go back to the menu
+     */
     public void BackHome()
     {
         manual.SetActive(false);

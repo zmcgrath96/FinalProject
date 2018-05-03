@@ -48,7 +48,11 @@ public class TestManager : MonoBehaviour, ITestEventSystem {
         mainCharacter = Instantiate(mainCharacter) as GameObject;
         testLevel.PlacePlayer(mainCharacter);
     }
-
+    /* EndTest
+       * @param none
+       * @return none
+       * Ends the test mode
+       */
     public void EndTest()
     {
         SceneManager.LoadScene("MainMenu");
@@ -56,7 +60,7 @@ public class TestManager : MonoBehaviour, ITestEventSystem {
 
     /*
      * Null Method used to fulfill ITestEventSystem
-     * 
+     *
      */
     public void StartTest() { }
 }

@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class MenuMusic : MonoBehaviour
 {
+  /* Awake
+   * @param none
+   * @return none
+   * Allows only one instance of menu music to play
+   */
     public void Awake()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("MenuMusic");
