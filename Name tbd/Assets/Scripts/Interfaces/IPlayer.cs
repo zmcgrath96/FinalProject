@@ -163,6 +163,12 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
         return Health;
     }
 
+
+    /**
+     * sets attack of the player
+     * @Param int
+     * @Return none
+    **/
     public void setAttack(int attack)
     {
         Attak = attack;
@@ -177,11 +183,24 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
         }
     }
 
+
+/**
+     * returns the attack of the player
+     * @Param None
+     * @Return Health
+    **/
     public int getAttack()
     {
         return Attak;
     }
 
+
+
+    /**
+     * setInvincibility
+     * @Param bool
+     * @Return none
+    **/
     public void setInvincibility(bool invinc)
     {
         Invinc = invinc;
@@ -196,28 +215,58 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
         }
     }
 
+
+    /**
+     * sets the duration of the item picked up
+     * @Param int
+     * @Return none
+    **/
     public void setIDuration(int dur)
     {
         InvincDur = (dur*50);
         Debug.Log("Invincibility Duration:" + InvincDur);
     }
 
+
+    /**
+     * gets the duration of the item 
+     * @Param none
+     * @Return int
+    **/
     public int getIDuration()
     {
         return InvincDur;
     }
 
+
+    /**
+     * sets duration of the attack item
+     * @Param int
+     * @Return none
+    **/
     public void setADuration(int dur)
     {
         AttakDur = (dur*50);
         Debug.Log("Attack Duration:" + AttakDur);
     }
 
+
+    /**
+     * Gets the attack item duration
+     * @Param None
+     * @Return int
+    **/
     public int getADuration()
     {
         return AttakDur;
     }
 
+
+    /**
+     * sees if the player is dead
+     * @Param None
+     * @Return bool
+    **/
     public bool isDead ()
     {
 		if (Health <= 0)
@@ -230,6 +279,12 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
 		}
 	}
 
+
+    /**
+     * Performs functions when player dies
+     * @Param None
+     * @Return none
+    **/
 	public void Die ()
     {
         if (playerName == "Gingy(Clone)")
@@ -249,7 +304,11 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
     }
 
 
-
+    /**
+     * Gets the collider touching the player for item interaction
+     * @Param Collider2D
+     * @Return none
+    **/
     void OnTriggerEnter2D(Collider2D other)
     {
         //Check the provided Collider2D parameter other to see if it is tagged "PickUp", if it is...
@@ -261,6 +320,12 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
         }
     }
 
+
+    /**
+     * Called every .02 sec
+     * @Param None
+     * @Return none
+    **/
     void FixedUpdate()
     {
 
