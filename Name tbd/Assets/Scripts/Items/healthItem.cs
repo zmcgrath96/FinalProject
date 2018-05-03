@@ -9,7 +9,7 @@ public class healthItem : MonoBehaviour, IItem
 
     private int changeToHealth;
 
-    /* Ablity
+    /**
      * @param IPlayer
      * @return none
      * Calls the ability of the item
@@ -19,7 +19,7 @@ public class healthItem : MonoBehaviour, IItem
           changeHealth(player);
     }
 
-    /* Duration
+    /**
      * @param IPlayer
      * @return none
      * does nothing
@@ -28,7 +28,7 @@ public class healthItem : MonoBehaviour, IItem
 
     }
 
-    /* changeHealth
+    /**
      * @param IPlayer
      * @return none
      * Changes player's health stat

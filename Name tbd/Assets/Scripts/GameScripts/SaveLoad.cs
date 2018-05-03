@@ -12,7 +12,7 @@ public static class SaveLoad {
     private static string path = Application.persistentDataPath + "/leaderboard.txt";
 
 
-    /* Save
+    /**
      * @param List<string>
      * @return none
      * Takes in a list of strings with values to write to file
@@ -41,7 +41,7 @@ public static class SaveLoad {
     }
 
 
-    /* Load
+    /**
      * @param none
      * @return List<string>
      * Reads a file, makes it a list of strings and returns that list

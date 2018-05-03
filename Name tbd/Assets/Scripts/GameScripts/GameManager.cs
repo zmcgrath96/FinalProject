@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
 
 
 
-    /* Awake
+    /**
          * @param none
          * @return none
          * Called when GameManager is initialized
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
     }
 
 
-    /* DiscernMainCharacter
+    /**
      * @param none
      * @return none
      * Determines which GameObject in the array to use based on the value of CharacterName
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
        
     }
 
-    /* Update
+    /**
          * @param none
          * @return none
          * Called based on the clock time
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
 
 
 
-    /* SpawnControlledPlayer
+    /**
          * @param none
          * @return none
          * Creates the GameObject of mainCharacer
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
     }
 
 
-    /* LevelTransition
+    /**
          * @param none
          * @return none
          * Shows and hides the level screen in between levels
@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
     }
 
 
-    /* HideLevelImage
+    /**
          * @param none
          * @return none
          * Hides the level transition screen
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
 
 
 
-    /* ShowEnemeis
+    /**
          * @param none
          * @return none
          * UI element that shows the number of enemies remaining
@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
 
     
 
-    /* InitGame
+    /**
          * @param none
          * @return none
          * Initializes the LevelManager and starts each level
@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
     }
 
 
-    /* NextLevel
+    /**
          * @param none
          * @return none
          * Increments level
@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
     }
 
 
-    /* GameOver
+    /**
          * @param none
          * @return none
          * Loads teh game over scene
@@ -179,7 +179,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
         SceneManager.LoadScene("GameOver");
     }
 
-    /* OnEnable
+    /**
      * @param none
      * @return none
      * Called by the Unity event system when the scene is enabled to start level
@@ -189,7 +189,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
 
-    /* OnDisable
+    /**
      * @param none
      * @return none
      * Called by the unity event system when the scene is disabled to iterate to next level
@@ -201,7 +201,7 @@ public class GameManager : MonoBehaviour , IGameEventSystem
 
 
 
-    /* OnLevelFinishedLoading
+    /**
      * @param Scene, LoadSceneMode
      * @return none
      * When the level is enabled/loaded, this scene method is called and iterates to the next level

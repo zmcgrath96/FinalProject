@@ -9,7 +9,7 @@ public class attackItem : MonoBehaviour, IItem
     private float changeToAttack;
     private int durationLength;
 
-    /* Ablity
+    /**
      * @param IPlayer
      * @return none
      * Calls the ability of the item
@@ -19,7 +19,7 @@ public class attackItem : MonoBehaviour, IItem
         Duration(player);
     }
 
-    /* Duration
+    /**
      * @param IPlayer
      * @return none
      * Sets the duration of the ability
@@ -30,7 +30,7 @@ public class attackItem : MonoBehaviour, IItem
         player.setADuration(durationLength);
     }
 
-    /* changeAttack
+    /**
      * @param IPlayer
      * @return none
      * Changes player's attack stat

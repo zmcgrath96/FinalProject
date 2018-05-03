@@ -44,7 +44,7 @@ public class IEnemy : MonoBehaviour, ICharacter
     * Does Damage to a player when it is struck by an enemy
     * @Param Damage Taken
     * @Return bool
-    **/
+    */
     public void TakeDamage(int damageTaken)
     {
         if (isDead() == false)
@@ -65,7 +65,7 @@ public class IEnemy : MonoBehaviour, ICharacter
     * Void
     * @Param None
     * @Return None
-    **/
+    */
     public void Attack()
     {
     }
@@ -73,7 +73,7 @@ public class IEnemy : MonoBehaviour, ICharacter
      * Void
      * @Param int Speed
      * @Return None
-    **/
+    */
     public void setSpeed(int speed)
     {
     }
@@ -82,7 +82,7 @@ public class IEnemy : MonoBehaviour, ICharacter
      * Void
      * @Param int Health
      * @Return None
-    **/
+    */
     public void setHealth(int health)
     {
     }
@@ -92,7 +92,7 @@ public class IEnemy : MonoBehaviour, ICharacter
      * not dead
      * @Param None
      * @Return Bool
-    **/
+    */
     public bool isDead()
     {
         if (Health <= 0)
@@ -110,7 +110,7 @@ public class IEnemy : MonoBehaviour, ICharacter
     * Destroys the character when it dies
     * @Param None
     * @Return None
-    **/
+    */
     public void Die()
     {
         if (doOnce == 0)

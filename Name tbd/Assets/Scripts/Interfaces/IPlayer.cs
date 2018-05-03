@@ -46,7 +46,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Takes Damage given to the character
      * @Param int damageTaken
      * @Return None
-    **/
+    */
 	public void TakeDamage (int damageTaken)
     {
         if (!Invinc)
@@ -77,7 +77,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * damage to or not
      * @Param None
      * @Return None
-    **/
+    */
 	public void Attack()
 	{
 		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
@@ -97,7 +97,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Shows text when the player picks up invincibility power up
      * @Param None
      * @Return None
-    **/
+    */
     void ShowInvinc()
     {
         invincImage = GameObject.Find("InvincibilityImage");
@@ -108,7 +108,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Hides the text that shows when you pick up invincibility
      * @Param None
      * @Return None
-    **/
+    */
     void HideInvinc()
     {
         invincImage.SetActive(false);
@@ -117,7 +117,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
       * Shows text when the player picks up attack power up
       * @Param None
       * @Return None
-     **/
+     */
     void ShowAttackBonus()
     {
         AttackBonusImage = GameObject.Find("AttackBonusImage");
@@ -128,7 +128,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Hides the text that shows when you pick up attack power up
      * @Param None
      * @Return None
-    **/
+    */
     void HideAttackBonus()
     {
         AttackBonusImage.SetActive(false);
@@ -137,7 +137,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * void
      * @Param int speed
      * @Return None
-    **/
+    */
     public void setSpeed (int speed)
     {
 	}
@@ -146,7 +146,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Sets the health for the player
      * @Param int health
      * @Return None
-    **/
+    */
 	public void setHealth(int health)
     {
 		HealthBarScript.health = health;
@@ -157,7 +157,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Gets the health of the player
      * @Param None
      * @Return Health
-    **/
+    */
     public int getHealth()
     {
         return Health;
@@ -168,7 +168,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * sets attack of the player
      * @Param int
      * @Return none
-    **/
+    */
     public void setAttack(int attack)
     {
         Attak = attack;
@@ -188,7 +188,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * returns the attack of the player
      * @Param None
      * @Return Health
-    **/
+    */
     public int getAttack()
     {
         return Attak;
@@ -200,7 +200,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * setInvincibility
      * @Param bool
      * @Return none
-    **/
+    */
     public void setInvincibility(bool invinc)
     {
         Invinc = invinc;
@@ -220,7 +220,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * sets the duration of the item picked up
      * @Param int
      * @Return none
-    **/
+    */
     public void setIDuration(int dur)
     {
         InvincDur = (dur*50);
@@ -232,7 +232,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * gets the duration of the item 
      * @Param none
      * @Return int
-    **/
+    */
     public int getIDuration()
     {
         return InvincDur;
@@ -243,7 +243,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * sets duration of the attack item
      * @Param int
      * @Return none
-    **/
+    */
     public void setADuration(int dur)
     {
         AttakDur = (dur*50);
@@ -255,7 +255,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Gets the attack item duration
      * @Param None
      * @Return int
-    **/
+    */
     public int getADuration()
     {
         return AttakDur;
@@ -266,7 +266,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * sees if the player is dead
      * @Param None
      * @Return bool
-    **/
+    */
     public bool isDead ()
     {
 		if (Health <= 0)
@@ -284,7 +284,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Performs functions when player dies
      * @Param None
      * @Return none
-    **/
+    */
 	public void Die ()
     {
         if (playerName == "Gingy(Clone)")
@@ -308,7 +308,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Gets the collider touching the player for item interaction
      * @Param Collider2D
      * @Return none
-    **/
+    */
     void OnTriggerEnter2D(Collider2D other)
     {
         //Check the provided Collider2D parameter other to see if it is tagged "PickUp", if it is...
@@ -325,7 +325,7 @@ public class IPlayer: MonoBehaviour, ICharacter, IEventSystemHandler
      * Called every .02 sec
      * @Param None
      * @Return none
-    **/
+    */
     void FixedUpdate()
     {
 

@@ -23,7 +23,7 @@ namespace Completed
         public int myLevel;
 
 
-        /* moveNextPos
+        /**
          * @param Vector3 nextPos, Direction nextDir (enum)
          * @return Vector3
          * In order to generate the map randomly, this is used to methodically move the next position in a clockwise direction
@@ -53,7 +53,7 @@ namespace Completed
         }
 
 
-        /* isBorder
+        /**
         * @param Vector3 nextPos
         * @return bool
         * checks to see if the next position to be placed is a border tile
@@ -73,7 +73,7 @@ namespace Completed
         }
 
 
-        /* isFloor
+        /**
          * @param Vector3 nextPos
          * @return bool
          * Checks to see if the next position is a floor tile that has already been placed
@@ -94,7 +94,7 @@ namespace Completed
         }
 
 
-        /* SetupScene
+        /**
          * @param int level
          * @return none
          * Main function of LevelGenerator
@@ -125,7 +125,7 @@ namespace Completed
 
 
 
-        /* FloorSetup
+        /**
          * @param none
          * @return none
          * Sets up the internal walls and floors randomly
@@ -174,7 +174,7 @@ namespace Completed
         }
 
 
-        /* generateEnemies
+        /**
          * @param int numberOfEnemies
          * @return none
          * Generates gameobjects of enemies and places them randomly
@@ -209,7 +209,7 @@ namespace Completed
             }
         }
 
-        /* generateItems
+        /**
          * @param int level
          * @return none
          * creates the gameobjects for items and places them randomly
@@ -230,7 +230,7 @@ namespace Completed
         }
 
 
-        /* ReplacePlayer
+        /**
          * @param Vector3 position
          * @return bool
          * Tells if the playerPos is too close to enemies
@@ -256,7 +256,7 @@ namespace Completed
         }
 
 
-            /* PlacePlayer
+            /**
              * @param GameObject Player
              * @return none
              * Places the player randomly in the map outside of the range of enemies
@@ -293,7 +293,7 @@ namespace Completed
             Player.transform.position = playerPos;
         }
 
-        /* pickPlayerPosition
+        /**
          * @param none
          * @return Vector3
          * Picks a random gridposition to place the player
@@ -308,7 +308,7 @@ namespace Completed
         }
 
 
-        /* Awake
+        /**
          * @param none
          * @return none
          * Called when LevelGenerator is created and is responsible for starting the map generation
@@ -322,7 +322,7 @@ namespace Completed
         }
 
 
-        /* getNumEnemies
+        /**
          * @param none
          * @return int
          * returns the number of enemies remaining
@@ -343,7 +343,7 @@ namespace Completed
             return returnNum;
         }
 
-        /* ClearMap
+        /**
              * @param none
              * @return none
              * Clears the entire map

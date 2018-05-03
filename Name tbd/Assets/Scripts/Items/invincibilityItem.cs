@@ -7,7 +7,7 @@ public class invincibilityItem : MonoBehaviour, IItem
 {
 
     private int durationLength;
-    /* Ablity
+    /**
      * @param IPlayer
      * @return none
      * Calls the ability of the item
@@ -17,7 +17,7 @@ public class invincibilityItem : MonoBehaviour, IItem
         Duration(player);
     }
 
-    /* Duration
+    /**
      * @param IPlayer
      * @return none
      * Sets the duration of the ability
@@ -27,7 +27,7 @@ public class invincibilityItem : MonoBehaviour, IItem
         durationLength = durationLength * 10;
         player.setIDuration(durationLength);
     }
-    /* changeInviciblity
+    /**
      * @param IPlayer
      * @return none
      * Changes player's invincibility to true

@@ -18,7 +18,7 @@ public class Map : MonoBehaviour {
 	 * Returns a holder in the hiearchy to hold walls, floor etc...
 	 * @Param None
 	 * @Return Transform 
-	**/
+	*/
 	public Transform GetBoardHolder(){
 		return boardHolder;
 	}
@@ -28,7 +28,7 @@ public class Map : MonoBehaviour {
 	 * Clears our list gridPositions and prepares it to generate a new board.
 	 * @Param None
 	 * @Return None
-	**/
+	*/
 	void InitialiseList ()
 	{
 		//Clear our list gridPositions.
@@ -51,7 +51,7 @@ public class Map : MonoBehaviour {
 	 * Place the foor tiles
 	 * @Param None
 	 * @Return None
-	**/
+	*/
 	public void placeFloors(){
 		GameObject toInstantiate;
 		for (int i = 0; i < floorPositions.Count; i++) {
@@ -65,7 +65,7 @@ public class Map : MonoBehaviour {
 	 * Place the wall tiles
 	 * @Param None
 	 * @Return None
-	**/
+	*/
 	public void placeWalls() {
 		GameObject toInstantiate;
 		for(int i = 0; i < gridPositions.Count; i++){
@@ -79,7 +79,7 @@ public class Map : MonoBehaviour {
 	 * Sets up outer walls
 	 * @Param None
 	 * @Return None
-	**/
+	*/
 	void BoardSetup()
 	{
 
@@ -116,7 +116,7 @@ public class Map : MonoBehaviour {
 	 * @Param int cols
 	 * @Param int row
 	 * @Return None
-	**/
+	*/
 	public void MapSetup(int cols, int row){
 		columns = cols;
 		rows = row;

@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
 
 
 
-    /* Awake
+    /**
      * @param none
      * @return none
      * Called to initialize LevelManager and create LevelGenerator
@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
 
     }
 
-    /* startLevel
+    /**
          * @param int level, GameObject character
          * @return none
          * Starts the level by placing player and setting up scene
@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
 
     }
 
-    /* getNumEnemies
+    /**
          * @param none
          * @return int
          * returns the number of enemies from levelGenerator
@@ -55,7 +55,7 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
 
 
 
-    /* isLevelOver
+    /**
          * @param none
          * @return bool
          * Checks to see fi the number of enemies is 0
@@ -72,7 +72,7 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
         else return false;
     }
 
-    /* NextLevel
+    /**
          * @param none
          * @return none
          * Loads the next level
@@ -84,7 +84,7 @@ public class LevelManager : MonoBehaviour, IEventSystemHandler
         ExecuteEvents.Execute<IGameEventSystem>(GameObject.Find("GameManager"), null, (x, y) => x.LevelOver());
 
     }
-    /* FixedUpdate
+    /**
          * @param none
          * @return none
          * Called once every .02s, checks to see if the level is over

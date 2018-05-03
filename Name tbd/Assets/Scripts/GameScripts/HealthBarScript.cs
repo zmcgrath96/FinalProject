@@ -9,7 +9,7 @@ public class HealthBarScript : MonoBehaviour {
 	int maxHealth = 100;
 	public static float health;
 
-	/* Start
+	/**
 			 * @param none
 			 * @return none
 			 * Initializes the health bar
@@ -19,7 +19,7 @@ public class HealthBarScript : MonoBehaviour {
 		health = IPlayer.Health;
 	}
 
-	/* Update
+	/**
 			 * @param none
 			 * @return none
 			 * Updates the health bar

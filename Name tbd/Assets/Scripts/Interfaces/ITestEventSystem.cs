@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public interface ITestEventSystem : IEventSystemHandler
 {
 
-    /* StartTest
+    /**
     * @param none
     * @return none
     * Use of the eventsystemhandler to message start test
@@ -14,7 +14,7 @@ public interface ITestEventSystem : IEventSystemHandler
     void StartTest();
 
 
-    /* EndTest
+    /**
     * @param none
     * @return none
     * Use of the eventsystemhandler to message end test
